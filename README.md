@@ -29,12 +29,18 @@ graphics libraries and a linux environment.
 
 # Build Instructions
 
+
+**The steps to install GNU Make on linux (ubuntu) are as follows**
+
+1. 
+2. 
+3. 
+
 **The steps to install OpenGL on linux (ubuntu) are as follows**
 
 1. run "sudo apt install freeglut3-dev"
 2. run "sudo apt install binutils-gold g++ cmakelibglew-dev g++ mesa-common-dev build-essential libglew1.5-dev libglm-dev"
 3. run "sudo apt install mesa-utils"
-
 
 **The steps to build this project are as follows**
 
