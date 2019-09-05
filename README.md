@@ -19,13 +19,13 @@ graphics libraries and a linux environment.
 
 ## Platform information
 
-### Operating system 		: Linux (Ubuntu)
-### Processor Architecture	: Intel X86/64
+#### Operating system 		: Linux (Ubuntu)
+#### Processor Architecture	: Intel X86/64
 
 ## Software Requirements
 
-### 1. GNU (Make), Compiler toolchain
-### 2. OpenGL graphics library
+#### 1. GNU (Make), Compiler toolchain
+#### 2. OpenGL graphics library
 
 # Build Instructions
 
