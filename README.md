@@ -19,19 +19,19 @@ graphics libraries and a linux environment.
 
 ## Platform information
 
-### Operating system : Linux (Ubuntu)
-### Processing unit  : Intel X86/64
+### Operating system 		: Linux (Ubuntu)
+### Processor Architecture	: Intel X86/64
 
 # Build Instructions
 
-The steps to install OpenGL on linux (ubuntu) are as follows
+**The steps to install OpenGL on linux (ubuntu) are as follows**
 
 1. run "sudo apt install freeglut3-dev"
 2. run "sudo apt install binutils-gold g++ cmakelibglew-dev g++ mesa-common-dev build-essential libglew1.5-dev libglm-dev"
 3. run "sudo apt install mesa-utils"
 
 
-The steps to build this project are as follows
+**The steps to build this project are as follows**
 
 1. run "git clone https://github.com/DiptarshiC/CSCI_5229_HW2"
 2. run "cd CSCI_5229_HW2"
