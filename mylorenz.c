@@ -22,6 +22,8 @@
 *@param:	int array[][]
 *
 *@return	void
+*
+*@todo:		
 */
 
 void lorenzgen(int arr[][])
@@ -42,6 +44,8 @@ void lorenzgen(int arr[][])
 *@param:	int argc, char **argv
 *
 *@return	int
+*
+*@todo:		
 */
 
 int main(int argc, char **argv)
