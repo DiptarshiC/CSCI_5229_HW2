@@ -1,6 +1,6 @@
 # About this Project
 
-## Author of this project is Diptarshi Chakraborty
+## Author : Diptarshi Chakraborty
 
 The objective of this file is to simulate the lorenz attractor graphically and to understand the
 physical concept behind it to illustrate a real-world phenomenon.For this I ultilize the openGL
