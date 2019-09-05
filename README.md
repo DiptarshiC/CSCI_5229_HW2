@@ -21,7 +21,14 @@ graphics libraries and a linux environment.
 
 # Build Instructions
 
-The steps to install and build the project are as follows
+The steps to install OpenGL on linux (ubuntu) are as follows
+
+1.
+2.
+3.
+
+
+The steps to build this project are as follows
 
 1. run "git clone https://github.com/DiptarshiC/CSCI_5229_HW2"
 2. run "cd CSCI_5229_HW2"
