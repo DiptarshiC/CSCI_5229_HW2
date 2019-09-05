@@ -22,3 +22,9 @@ The steps to install and build the project are as follows
 3. run "make"
 
 # References
+
+1. [link] http://www.prinmath.com/csci5229/misc/lorenz.c
+2. [link] http://www.opengl-tutorial.org
+3. [link] http://mathworld.wolfram.com/LorenzAttractor.html
+
+
