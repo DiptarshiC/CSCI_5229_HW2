@@ -8,6 +8,9 @@ The objective of this file is to simulate the lorenz attractor graphically and t
 physical concept behind it to illustrate a real-world phenomenon.For this I ultilize the openGL
 graphics libraries and a linux environment.
 
+## Program Flow
+
+
 ## What this repository contains
 
 1. source file 
