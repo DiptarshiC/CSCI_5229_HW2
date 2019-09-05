@@ -22,6 +22,11 @@ graphics libraries and a linux environment.
 ### Operating system 		: Linux (Ubuntu)
 ### Processor Architecture	: Intel X86/64
 
+## Software Requirements
+
+### 1. GNU (Make), Compiler toolchain
+### 2. OpenGL graphics library
+
 # Build Instructions
 
 **The steps to install OpenGL on linux (ubuntu) are as follows**
