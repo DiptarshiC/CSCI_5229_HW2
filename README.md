@@ -17,7 +17,7 @@ graphics libraries and a linux environment.
 
 The steps to install and build the project are as follows
 
-1. run "git clone https://github.com/DiptarshiC/CSCI_5229_HW2.git"
+1. run "git clone https://github.com/DiptarshiC/CSCI_5229_HW2"
 2. run "cd CSCI_5229_HW2"
 3. run "make"
 
