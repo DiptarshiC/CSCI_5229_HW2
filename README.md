@@ -2,14 +2,16 @@
 
 ## Author : Diptarshi Chakraborty
 
+## Objective
+ 
 The objective of this file is to simulate the lorenz attractor graphically and to understand the
 physical concept behind it to illustrate a real-world phenomenon.For this I ultilize the openGL
 graphics libraries and a linux environment.
 
 ## Platform information
 
-Operating system : Linux (Ubuntu)
-Processing unit  : Intel X86/64
+### Operating system : Linux (Ubuntu)
+### Processing unit  : Intel X86/64
 
 # Build Instructions
 
