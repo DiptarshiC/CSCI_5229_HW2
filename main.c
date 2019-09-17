@@ -37,6 +37,8 @@ double s = 10;
 double b = 2.6;
 double r = 28;
 
+int alpha=10;
+int theta=10;
 
 
 /**
@@ -46,7 +48,7 @@ double r = 28;
 *               in an array. You have to provide array and the number of elements n
 *
 *
-*@param:        int array[][], int n
+*@param:        void
 *
 *@return:       void
 *
@@ -123,6 +125,138 @@ void lorenz_curve()
 
 }
 
+/**
+*@func:         draw_x_y_z
+*
+*@description:  Helps draw the X Y and Z access
+*
+*@param:        void
+*
+*@return:       void
+*
+*@reference:    void
+*/
+
+void draw_x_y_z()
+{
+
+	glPointSize(2);
+        glColor3f(1,1,1);
+        glBegin(GL_LINES);
+
+        /*X Axis*/
+        glVertex3d(0,0,0);
+        glVertex3d(5,0,0);
+
+        /*Y Axis*/
+        glVertex3d(0,0,0);
+        glVertex3d(0,5,0);
+
+        /*Z Axis*/
+        glVertex3d(0,0,0);
+        glVertex3d(0,0,5);
+
+        glEnd();
+}
+
+
+/**
+*@func:		change_Param
+*
+*@description:	Helps map keyboard keys for interaction with the image
+*
+*@param:	unsigned char key, int x, int y
+*
+*@return:	void
+*
+*/
+
+void change_Param(unsigned char key, int x, int y)
+{
+	switch(key)
+
+	{
+		case('s'):
+		s = s + 0.01;
+		break;
+
+		case('k'):
+		s = s - 0.01;
+		break;
+
+		case('d'):
+		b = b + 0.01;
+		break;
+
+		case('x'):
+                b = b - 0.01;
+                break;
+
+		case('f'):
+                r = r + 0.01;
+                break;
+
+		case('v'):
+                r = r + 0.01;
+                break;
+	}
+
+	 glutPostRedisplay();
+
+}
+
+/**
+*@func:		arrow_key_move
+*
+*
+*@description:	this function allows me to use arrow keys 
+*
+*@param:	int key, int x, int y
+*
+*@return:	void
+*
+*@reference:	
+*
+*/
+
+void arrow_keys_move(int key, int x, int y)
+{
+	switch(key)
+	{
+		case GLUT_KEY_UP:
+		alpha++;
+		theta %= 360;
+   		alpha %= 360;
+		glutPostRedisplay();
+		break;
+
+		case GLUT_KEY_DOWN:
+		alpha--;
+		theta %= 360;
+   		alpha %= 360;
+		glutPostRedisplay();
+		break;
+
+		case GLUT_KEY_LEFT:
+                theta++;
+		theta %= 360;
+   		alpha %= 360;
+		glutPostRedisplay();
+                break;
+
+                case GLUT_KEY_RIGHT:
+                theta--;
+		theta %= 360;
+   		alpha %= 360;
+		glutPostRedisplay();
+
+                break;
+
+	}
+
+	
+
+}
 
 /**
 *@func:         mydisplay
@@ -148,8 +282,12 @@ void mydisplay()
          clears the slate*/
         glLoadIdentity();
 
-	glRotated(30,1,0,0);
-  	glRotated(30,0,1,0);
+	glRotated(alpha,1,0,0);
+  	glRotated(theta,0,1,0);
+
+
+	/*Calling the draw_x_y_z function*/
+	draw_x_y_z();
 
         /*calling function lorenz_curve to draw the curve*/
         lorenz_curve();
@@ -178,31 +316,9 @@ void display()
 {
 
 	mydisplay();
-	glutPostRedisplay();
-	s=s+1;
-        b+=0.5;
-        r+=1;
 
 }
 
-/**
-*@func: 	draw_x_y_z
-*
-*@description:	Helps draw the X Y and Z access
-*
-*@param:	void
-*
-*@return:	void
-*
-*@reference:	void
-*/
-void draw_x_y_z()
-{
-
-
-
-
-}
 
 /**
 *@func:		reshape
@@ -264,15 +380,13 @@ int main(int argc, char *argv[])
 {
 
 
-
+	/*Initialize using command line arguments*/
 	glutInit(&argc, argv);
 
 	/*Initializing display modes*/
-
-	glutInitDisplayMode(GLUT_RGB |  GLUT_DOUBLE);
+	glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH |  GLUT_DOUBLE);
 
 	/*Initializing window position*/
-
 	glutInitWindowPosition(100,100);
 
 	/*Now I am fixing the window size to 720 * 640*/
@@ -287,6 +401,11 @@ int main(int argc, char *argv[])
 	/*Reshape function*/
 	glutReshapeFunc(reshape);
 
+	/*Function for mapping the keyboard params*/
+	glutKeyboardFunc(change_Param);
+
+	/*Use arrow keys to change the viewing angles*/
+	glutSpecialFunc(arrow_keys_move);
 
 	/*glutMainLoop enters the GLUT event processing loop*/
 	glutMainLoop();
