@@ -30,11 +30,6 @@ graphics libraries and a linux environment.
 # Build Instructions
 
 
-**The steps to install GNU Make on linux (ubuntu) are as follows**
-
-1. 
-2. 
-3. 
 
 **The steps to install OpenGL on linux (ubuntu) are as follows**
 
