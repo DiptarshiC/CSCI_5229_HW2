@@ -56,6 +56,15 @@ The flow of the program is as follows
 | Key | Effect |
 | ---- |---- |
 | s | Increases S |
+| x | Decreases S |
+| d | Increases B |
+| c | Decreases B |
+| f | Increases F |
+| v | Decreases v |
+
+
+
+
 
 
 # References
