@@ -27,7 +27,7 @@ graphics libraries and a linux environment.
 #### 1. GNU (Make), Compiler toolchain
 #### 2. OpenGL graphics library
 
-# Build Instructions
+# Key Bindings
 
 
 
