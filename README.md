@@ -53,7 +53,9 @@ The flow of the program is as follows
 3. run "make"
 
 ## Key Bindings to interact with the Animation
-
+| Key | Effect |
+| ---- |---- |
+| s | Increases S |
 
 
 # References
