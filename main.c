@@ -128,7 +128,9 @@ void lorenz_curve()
 /**
 *@func:         draw_x_y_z
 *
-*@description:  Helps draw the X Y and Z access
+*@description:  Helps draw the X Y and Z access. This actually uses
+		the concept of lines to draw the X Y and Z axes on 
+		the screen and then display axes labels
 *
 *@param:        void
 *
@@ -164,6 +166,10 @@ void draw_x_y_z()
 *@func:		change_Param
 *
 *@description:	Helps map keyboard keys for interaction with the image
+*		The project needed me to allow myself to interact with
+*		the behaviour of the lorentz attractor. So for that,I
+*		have bound a few keys that would change s, b, and r
+*		and allow us to witness changes in the lorenz attractor.
 *
 *@param:	unsigned char key, int x, int y
 *
