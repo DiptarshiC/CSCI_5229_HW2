@@ -72,7 +72,7 @@ void gen()
 
         /*Time Step*/
 
-        double delta_t = 0.001;
+        double delta_t = 0.005;
 
         for(int i = 0; i < Global_N; i++)
         {
@@ -85,9 +85,9 @@ void gen()
                 y = y + delta_t * delta_y;
                 z = z + delta_t * delta_z;
 
-                array[i][0] = x * 0.02;
-                array[i][1] = y * 0.02;
-                array[i][2] = z * 0.02;
+                array[i][0] = x * 0.08;
+                array[i][1] = y * 0.08;
+                array[i][2] = z * 0.08;
         }
 
 }
