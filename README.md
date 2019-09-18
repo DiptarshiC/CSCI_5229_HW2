@@ -27,9 +27,7 @@ graphics libraries and a linux environment.
 #### 1. GNU (Make), Compiler toolchain
 #### 2. OpenGL graphics library
 
-# Key Bindings
-
-
+## Steps to install OpenGL and build this project
 
 **The steps to install OpenGL on linux (ubuntu) are as follows**
 
