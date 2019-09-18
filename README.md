@@ -9,6 +9,17 @@ physical concept behind it to illustrate a real-world phenomenon.For this I ulti
 graphics libraries and a linux environment.
 
 ## Program Flow
+The flow of the program is as follows
+
+1. First the main function is started with the commandline arguments
+2. The mode of display is the initialized
+3. The size window that will display my project my projects is set
+4. The window is named with a particular name
+5. Using the function pointed by the api glutDisplayFunc() the main function that displays my project is called
+6. After this, all the functions flow around in a sort of a while loop
+	glutReshapeFunc() : 	handles the reshaping of the Window and the corresponding image
+	glutKeyboardFunc() : 	supports an event driven utlity that handles keyboard presses
+	glutMainLoop(): 	Allows us to loop through the main function.
 
 
 ## What this repository contains
