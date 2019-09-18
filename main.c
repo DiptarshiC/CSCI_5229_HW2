@@ -29,7 +29,7 @@
 
 
 
-#define		Global_N	(50000)
+#define		Global_N	(70000)
 
 double array[Global_N][3];
 
@@ -85,9 +85,9 @@ void gen()
                 y = y + delta_t * delta_y;
                 z = z + delta_t * delta_z;
 
-                array[i][0] = x * 0.08;
-                array[i][1] = y * 0.08;
-                array[i][2] = z * 0.08;
+                array[i][0] = x * 0.02;
+                array[i][1] = y * 0.02;
+                array[i][2] = z * 0.02;
         }
 
 }
@@ -145,16 +145,16 @@ void draw_x_y_z()
         glBegin(GL_LINES);
 
         /*X Axis*/
-        glVertex3d(0,0,0);
-        glVertex3d(5,0,0);
+        glVertex3d(-1,-1,-1);
+        glVertex3d(15,-1,-1);
 
         /*Y Axis*/
-        glVertex3d(0,0,0);
-        glVertex3d(0,5,0);
+        glVertex3d(-1,-1,-1);
+        glVertex3d(-1,15,-1);
 
         /*Z Axis*/
-        glVertex3d(0,0,0);
-        glVertex3d(0,0,5);
+        glVertex3d(-1,-1,-1);
+        glVertex3d(-1,-1,15);
 
         glEnd();
 }
@@ -177,27 +177,27 @@ void change_Param(unsigned char key, int x, int y)
 
 	{
 		case('s'):
-		s = s + 0.01;
-		break;
-
-		case('k'):
-		s = s - 0.01;
-		break;
-
-		case('d'):
-		b = b + 0.01;
+		s = s + 5;
 		break;
 
 		case('x'):
-                b = b - 0.01;
+		s = s - 5;
+		break;
+
+		case('d'):
+		b = b + 5;
+		break;
+
+		case('c'):
+                b = b - 5;
                 break;
 
 		case('f'):
-                r = r + 0.01;
+                r = r + 5;
                 break;
 
 		case('v'):
-                r = r + 0.01;
+                r = r - 5;
                 break;
 	}
 
@@ -387,7 +387,7 @@ int main(int argc, char *argv[])
 	glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH |  GLUT_DOUBLE);
 
 	/*Initializing window position*/
-	glutInitWindowPosition(100,100);
+	glutInitWindowPosition(30,30);
 
 	/*Now I am fixing the window size to 720 * 640*/
 	glutInitWindowSize(720,640);
