@@ -41,6 +41,10 @@ graphics libraries and a linux environment.
 2. run "cd CSCI_5229_HW2"
 3. run "make"
 
+## Key Bindings to interact with the Animation
+
+
+
 # References
 
 1. [link] http://www.prinmath.com/csci5229/misc/lorenz.c
