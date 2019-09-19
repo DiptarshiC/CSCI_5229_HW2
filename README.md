@@ -64,8 +64,8 @@ The flow of the program is as follows
 | v | Decreases R |
 | &darr; | Bottom view |
 | &uarr; | Top view |
-| &rarr | Right view |
-| &larr | Left view |
+| &rarr; | Right view |
+| &larr; | Left view |
 
 
 
