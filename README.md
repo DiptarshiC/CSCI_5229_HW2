@@ -52,6 +52,10 @@ The flow of the program is as follows
 2. run "cd CSCI_5229_HW2"
 3. run "make"
 
+**Command to clean the executable**
+make clean
+
+
 ## Key Bindings to interact with the Animation
 
 | Key | Effect |
@@ -67,7 +71,10 @@ The flow of the program is as follows
 | &rarr; | Right view |
 | &larr; | Left view |
 
+## Time it took to complete the assignment
 
+It took me 7 days to complete the assignment.
+Understanding OpenGL took the maximum
 
 # References
 

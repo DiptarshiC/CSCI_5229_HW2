@@ -3,9 +3,6 @@
 *
 *@description:  main C file
 *
-*
-*@reference:
-*
 *@author:       Diptarshi Chakraborty
 *
 *@date:         05-09-2019
@@ -62,9 +59,9 @@ void gen()
 {
 
         /*  Coordinates  */
-        double x = 1;
-        double y = 1;
-        double z = 1;
+        double x = -1;
+        double y = -1;
+        double z = -1;
 
         double delta_x;
         double delta_y;
@@ -115,6 +112,7 @@ void lorenz_curve()
 	for (int i=0;i<Global_N;i++)
   	{
 
+		/*For adding shades of color*/
 		glColor3ub(i % 200,i % 100,  i % 75);
 		glVertex3d(array[i][0]/3,array[i][1]/3,array[i][2]/2);
 		glVertex3dv(array[i]);;
@@ -135,8 +133,6 @@ void lorenz_curve()
 *@param:        void
 *
 *@return:       void
-*
-*@reference:    void
 */
 
 void draw_x_y_z()
@@ -216,6 +212,8 @@ void change_Param(unsigned char key, int x, int y)
 *
 *
 *@description:	this function allows me to use arrow keys 
+*		The Up arrow key gives you the top view of the graphic
+*		The Down arrow key gives you the bottom view of the graphic
 *
 *@param:	int key, int x, int y
 *
@@ -343,7 +341,7 @@ void reshape(int width,int height)
     	double dimension = 3.0;
 
 	/* Calculate width to height ratio*/
-   	double w2h = (height>0) ? (double)width/height : 1;
+   	double widht2height = (height>0) ? (double)width/height : 1;
 
 	/*  Set viewport as entire window */
    	glViewport(0,0, width,height);
@@ -355,7 +353,7 @@ void reshape(int width,int height)
    	glLoadIdentity();
 
 	/*  Orthogonal projection:  unit cube adjusted for aspect ratio*/
-   	glOrtho(-w2h*dimension,+w2h*dimension, -dimension,+dimension, -dimension,+dimension);
+   	glOrtho(-widht2height*dimension,+widht2height*dimension, -dimension,+dimension, -dimension,+dimension);
 
 	/*  Select model view matrix*/
    	glMatrixMode(GL_MODELVIEW);
@@ -399,7 +397,7 @@ int main(int argc, char *argv[])
 	glutInitWindowSize(720,640);
 
 	/*Naming the window*/
-	glutCreateWindow("Lorentz Attractor by Diptarshi ");
+	glutCreateWindow("Lorenz Attractor by Diptarshi ");
 
 	/*Now Display the figure*/
 	glutDisplayFunc(display);
