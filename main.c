@@ -35,7 +35,7 @@ double array[Global_N][3];
 
 double s = 10;
 double b = 2.6;
-double r = 28;
+double r = 50;
 
 int alpha=10;
 int theta=10;
@@ -115,8 +115,8 @@ void lorenz_curve()
 	for (int i=0;i<Global_N;i++)
   	{
 
-		glColor3ub(i % 255,i % 128,  i % 64);
-		glVertex3d(array[i][0]/2,array[i][1]/2,array[i][2]/2);
+		glColor3ub(i % 200,i % 100,  i % 75);
+		glVertex3d(array[i][0]/3,array[i][1]/3,array[i][2]/2);
 		glVertex3dv(array[i]);;
 
   	}
@@ -183,27 +183,27 @@ void change_Param(unsigned char key, int x, int y)
 
 	{
 		case('s'):
-		s = s + 5;
+		s = s + 3;
 		break;
 
 		case('x'):
-		s = s - 5;
+		s = s - 3;
 		break;
 
 		case('d'):
-		b = b + 5;
+		b = b + 3;
 		break;
 
 		case('c'):
-                b = b - 5;
+                b = b - 3;
                 break;
 
 		case('f'):
-                r = r + 5;
+                r = r + 3;
                 break;
 
 		case('v'):
-                r = r - 5;
+                r = r - 3;
                 break;
 	}
 
