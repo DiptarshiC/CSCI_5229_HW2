@@ -62,6 +62,11 @@ The flow of the program is as follows
 | c | Decreases B |
 | f | Increases R |
 | v | Decreases R |
+| &larr | Bottom view |
+| &uarr | Top view |
+| &larr | Bottom view |
+| &larr | Bottom view |
+
 
 
 # References
