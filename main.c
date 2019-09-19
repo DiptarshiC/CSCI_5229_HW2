@@ -85,9 +85,9 @@ void gen()
                 y = y + delta_t * delta_y;
                 z = z + delta_t * delta_z;
 
-                array[i][0] = x * 0.02;
-                array[i][1] = y * 0.02;
-                array[i][2] = z * 0.02;
+                array[i][0] = x * 0.04;
+                array[i][1] = y * 0.04;
+                array[i][2] = z * 0.04;
         }
 
 }
