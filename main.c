@@ -58,13 +58,11 @@ void my_Custom_print(const char* a , ...)
 	vsnprintf(CAP,1024,a,arguments);
 	va_end(arguments);
 
-	while(*CAP)
+	while(*cap)
 	{
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,*cap);
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,* cap++);
 
 	}
-
-
 }
 
 /**
@@ -173,26 +171,28 @@ void draw_x_y_z()
 
         /*X Axis*/
         glVertex3d(-1,-1,-1);
-        glVertex3d(15,-1,-1);
+        glVertex3d(6,-1,-1);
 
         /*Y Axis*/
         glVertex3d(-1,-1,-1);
-        glVertex3d(-1,15,-1);
+        glVertex3d(-1,6,-1);
 
         /*Z Axis*/
         glVertex3d(-1,-1,-1);
-        glVertex3d(-1,-1,15);
+        glVertex3d(-1,-1,6);
 
-	//glRasterPos3d(-1,0,0);
-    	//my_Custom_print("X");
+	glEnd();
 
-	//glRasterPos3d(0,-1,0);
-    	//my_Custom_print("Y");
+	glRasterPos3d(1,-1,-1);
+    	my_Custom_print("X");
 
-	//glRasterPos3d(0,0,-1);
-    	//my_Custom_print("Z");
+	glRasterPos3d(-1,1,-1);
+    	my_Custom_print("Y");
 
-        glEnd();
+	glRasterPos3d(-1,-1,1);
+    	my_Custom_print("Z");
+
+//        glEnd();
 }
 
 
