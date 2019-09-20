@@ -59,7 +59,7 @@ make clean
 ## Key Bindings to interact with the Animation
 
 The parameters on which the Lorenz descriptor changes are S, B and R by the equation
-
+I have provided the X, Y and Z axes for prespective
 dx/dt = S * (y - x)
 
 dy/dt = x * (R - z) - y

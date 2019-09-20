@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg,h>
 
 #define GL_GLEXT_PROTOTYPES
 
@@ -37,6 +38,34 @@ double r = 50;
 int alpha=10;
 int theta=10;
 
+
+/**
+*@func:		my_Custom_print
+*
+*@description:	Helps map characters to the console
+*
+*@param:	const char* a
+*
+*@return:	void
+*/
+
+void my_Custom_print(const char* a , ...)
+{
+	char CAP[1024];
+	char * cap=CAP
+	va_list arguments;
+	va_start(arguments, a);
+	vsnprintf(CAP,1024,a,arguments);
+	va_end(args);
+
+	while(*CAP)
+	{
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,*cap);
+
+	}
+
+
+}
 
 /**
 *@func:         gen
@@ -153,6 +182,15 @@ void draw_x_y_z()
         /*Z Axis*/
         glVertex3d(-1,-1,-1);
         glVertex3d(-1,-1,15);
+
+	glRasterPos3d(-1,-1,-1);
+    	my_Custom_print("X");
+
+	glRasterPos3d(-1,-1,-1);
+    	my_Custom_print("Y");
+
+	glRasterPos3d(-1,-1,-1);
+    	my_Custom_print("Z");
 
         glEnd();
 }
