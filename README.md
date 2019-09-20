@@ -80,8 +80,8 @@ So, to change S B and R, the corresponding keys are as follows.
 | v | Decreases R |
 | &darr; | Bottom view |
 | &uarr; | Top view |
-| &rarr; | Right view |
-| &larr; | Left view |
+| &rarr; | Left view |
+| &larr; | Right view |
 
 ## Time it took to complete the assignment
 
