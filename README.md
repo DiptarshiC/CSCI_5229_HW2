@@ -81,5 +81,7 @@ Understanding OpenGL took the maximum
 1. [link] http://www.prinmath.com/csci5229/misc/lorenz.c
 2. [link] http://www.opengl-tutorial.org
 3. [link] http://mathworld.wolfram.com/LorenzAttractor.html
+4. [link] http://www.prinmath.com/csci5229/F19/handouts/20190926a.pdf
+
 
 

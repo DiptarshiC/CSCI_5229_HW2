@@ -5,7 +5,7 @@
 *
 *@author:       Diptarshi Chakraborty
 *
-*@date:         05-09-2019
+*@date:         19-09-2019
 *
 */
 
@@ -98,7 +98,7 @@ void gen()
 *
 *@return:       void
 *
-*@todo:
+*@references:	http://www.prinmath.com/csci5229/F19/handouts/20190926a.pdf
 */
 
 void lorenz_curve()
@@ -229,37 +229,33 @@ void arrow_keys_move(int key, int x, int y)
 	{
 		case GLUT_KEY_UP:
 		alpha++;
-		theta %= 360;
-   		alpha %= 360;
+		theta %= 360; /*Helps angles be within the margin of 360*/
+   		alpha %= 360; /*Helps angles be within the margin of 360*/
 		glutPostRedisplay();
 		break;
 
 		case GLUT_KEY_DOWN:
 		alpha--;
-		theta %= 360;
-   		alpha %= 360;
+		theta %= 360;/*Helps angles be within the margin of 360*/
+   		alpha %= 360;/*Helps angles be within the margin of 360*/
 		glutPostRedisplay();
 		break;
 
 		case GLUT_KEY_LEFT:
                 theta++;
-		theta %= 360;
-   		alpha %= 360;
+		theta %= 360;/*Helps angles be within the margin of 360*/
+   		alpha %= 360;/*Helps angles be within the margin of 360*/
 		glutPostRedisplay();
                 break;
 
                 case GLUT_KEY_RIGHT:
                 theta--;
-		theta %= 360;
-   		alpha %= 360;
+		theta %= 360;/*Helps angles be within the margin of 360*/
+   		alpha %= 360;/*Helps angles be within the margin of 360*/
 		glutPostRedisplay();
-
                 break;
 
 	}
-
-	
-
 }
 
 /**
@@ -270,8 +266,6 @@ void arrow_keys_move(int key, int x, int y)
 *@param:        void
 *
 *@return:       void
-*
-*reference:     
 *
 *todo:		add variable angle functionality
 */
@@ -308,7 +302,7 @@ void mydisplay()
 /**
 *@func:		display
 *
-*@description:
+*@description:	wrapper around mydisplay
 *
 *@void:		void
 *
@@ -336,7 +330,7 @@ void display()
 *@reference:
 */
 
-void reshape(int width,int height) 
+void reshape(int width,int height)
 {
     	double dimension = 3.0;
 
@@ -373,9 +367,7 @@ void reshape(int width,int height)
 *
 *@param:        int argc, char argv[][]
 *
-*@return:       void
-*
-*@reference:    N/A
+*@return:       int
 *
 *@todo:		add interaction API calls
 */
