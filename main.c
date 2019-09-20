@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg,h>
+#include <stdarg.h>
 
 #define GL_GLEXT_PROTOTYPES
 
@@ -52,11 +52,11 @@ int theta=10;
 void my_Custom_print(const char* a , ...)
 {
 	char CAP[1024];
-	char * cap=CAP
+	char * cap=CAP;
 	va_list arguments;
 	va_start(arguments, a);
 	vsnprintf(CAP,1024,a,arguments);
-	va_end(args);
+	va_end(arguments);
 
 	while(*CAP)
 	{
@@ -183,14 +183,14 @@ void draw_x_y_z()
         glVertex3d(-1,-1,-1);
         glVertex3d(-1,-1,15);
 
-	glRasterPos3d(-1,-1,-1);
-    	my_Custom_print("X");
+	//glRasterPos3d(-1,0,0);
+    	//my_Custom_print("X");
 
-	glRasterPos3d(-1,-1,-1);
-    	my_Custom_print("Y");
+	//glRasterPos3d(0,-1,0);
+    	//my_Custom_print("Y");
 
-	glRasterPos3d(-1,-1,-1);
-    	my_Custom_print("Z");
+	//glRasterPos3d(0,0,-1);
+    	//my_Custom_print("Z");
 
         glEnd();
 }
