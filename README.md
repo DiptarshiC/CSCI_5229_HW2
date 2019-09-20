@@ -66,8 +66,9 @@ dy/dt = x * (R - z) - y
 
 dz/dt = x*y - B*z 
 
-So, to change S B and R, the corresponding keys are as follows:
 To change your view, you can use the up. down, left and right arrow keys
+So, to change S B and R, the corresponding keys are as follows.
+
 
 | Key | Effect |
 | ---- |---- |
