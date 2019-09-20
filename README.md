@@ -58,6 +58,17 @@ make clean
 
 ## Key Bindings to interact with the Animation
 
+The parameters on which the Lorenz descriptor changes are S, B and R by the equation
+
+dx/dt = S * (y - x)
+
+dy/dt = x * (R - z) - y
+
+dz/dt = x*y - B*z 
+
+So, to change S B and R, the corresponding keys are as follows:
+
+
 | Key | Effect |
 | ---- |---- |
 | s | Increases S |
